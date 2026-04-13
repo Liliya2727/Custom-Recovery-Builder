@@ -14,23 +14,23 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree' # Your already made Device Tree for TWRP
         required: true
-        default: 'https://github.com/cd-Crypton/custom_recovery_tree_asus_AI2201.git'
+        default: 'https://github.com/Liliya2727/android_recovery_infinix_x6739'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch' # Your Device Tree Branch, make sure it's right.
         required: true
-        default: 'Android-12'
+        default: 'android-12.1'
       DEVICE_PATH:
         description: 'Specify your Device Path' # As is, just like your DEVICE_PATH in your BoardConfig.mk
         required: true
-        default: 'device/asus/AI2201'
+        default: 'device/infinix/X6739'
       DEVICE_NAME:
         description: 'Specify your Device Codename' # As is, just like your PRODUCT_DEVICE in your device tree.
         required: true
-        default: 'AI2201'
+        default: 'X6739'
       BUILD_TARGET:
         description: 'Specify your Build Target' # Pick among boot, recovery and vendor_boot
         required: true
-        default: 'recovery'
+        default: 'vendorboot'
         type: choice
         options:
         - boot
@@ -100,8 +100,8 @@ jobs:
       run: |
         mkdir android-recovery
         cd android-recovery
-        git config --global user.name "${{ github.actor }}"
-        git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+        git config --global user.name "Liliya2727"
+        git config --global user.email "syarifbintang16@gmail.com"
         repo init --depth=1 -u https://github.com/PitchBlackRecoveryProject/manifest_pb.git -b ${{ inputs.MANIFEST_BRANCH }}
         
     - name: Repo Sync

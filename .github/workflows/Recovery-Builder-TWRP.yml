@@ -15,7 +15,7 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree' # Your already made Device Tree for TWRP
         required: true
-        default: 'https://github.com/xoo2001/android_twrp_infinix_x6739'
+        default: 'https://github.com/Liliya2727/android_recovery_infinix_x6739'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch' # Your Device Tree Branch, make sure it's right.
         required: true
@@ -106,8 +106,8 @@ jobs:
       run: |
         mkdir android-recovery
         cd android-recovery
-        git config --global user.name "xoo2001"
-        git config --global user.email "ekora2001@gmail.com"
+        git config --global user.name "Liliya2727"
+        git config --global user.email "syarifbintang16@gmail.com"
         repo init --depth=1 -u ${{ steps.manifest.outputs.value }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
         sed -i '/<remove-project name="platform\/external\/gflags"  \/>/d' .repo/manifests/remove-minimal.xml
         
