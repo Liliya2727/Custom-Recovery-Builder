@@ -72,7 +72,7 @@ jobs:
       with:
         swap-size-gb: 12
 
-   - name: Prepare the environment
+    - name: Prepare the environment
       run: |
         sudo apt update
         sudo apt -y upgrade
